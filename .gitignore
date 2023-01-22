@@ -15,6 +15,8 @@ lerna-debug.log*
 .DS_Store
 # env var
 .env
+runDockerImage.sh
+dockerBuild.sh
 
 # Tests
 /coverage
