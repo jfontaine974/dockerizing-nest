@@ -9,7 +9,8 @@ import * as Joi from 'joi';
 		ConfigModule.forRoot({
 			validationSchema: Joi.object({
 				NODE_ENV: Joi.string().valid('development', 'production').default('development'),
-				APP_PORT: Joi.number().default(3000)
+				APP_PORT: Joi.number().default(3000),
+				USERNAME: Joi.string().default('')
 			}),
 			isGlobal: true,
 			envFilePath: '.env'
