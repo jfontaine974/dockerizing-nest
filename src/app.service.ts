@@ -8,5 +8,6 @@ export class AppService {
 	getHello(ip: string): string {
 		const username: string = this.configService.get<string>('USERNAME') + ' ';
 		return `Hello ${username}from ${ip} !`;
+
 	}
 }
