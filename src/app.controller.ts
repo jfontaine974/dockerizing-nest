@@ -6,7 +6,7 @@ export class AppController {
 	constructor(private readonly appService: AppService) { }
 
 	@Get()
-	getHello(@Ip() ip): string {
+	getHello(@Ip() ip): any {
 		return this.appService.getHello(ip);
 	}
 }
