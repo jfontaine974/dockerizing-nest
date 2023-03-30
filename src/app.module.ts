@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
+import { UserModule } from './user/user.module';
 import * as Joi from 'joi';
 
 @Module({
@@ -14,7 +15,8 @@ import * as Joi from 'joi';
 			}),
 			isGlobal: true,
 			envFilePath: '.env'
-		})
+		}),
+		UserModule
 	],
 	controllers: [AppController],
 	providers: [AppService],
